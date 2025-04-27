@@ -14,12 +14,7 @@ Inicialize o tokenizer informando as opções desejadas:
 ```zig
 const Tokenizer = @import("tokenizer.zig").Tokenizer;
 
-const tokenizer = Tokenizer.init(
-    .{
-        .lowercase = false,
-        .mode = .Aggressive,
-    }
-);
+const tokenizer = Tokenizer.init(true, .Agressive);
 
 const input = "Olá, Mundo!";
 const tokens = try tokenizer.tokenize(allocator, input);
